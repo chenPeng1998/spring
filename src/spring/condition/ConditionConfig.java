@@ -1,6 +1,7 @@
 package spring.condition;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * 配置类
  */
 @Configuration
+@ComponentScan("spring.condition")
 public class ConditionConfig {
     @Bean
     @Conditional(WindowsCondition.class)
